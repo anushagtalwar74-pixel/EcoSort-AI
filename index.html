@@ -1,0 +1,341 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoSort AI | Waste Segregation Assistant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">♻️ EcoSort <span>AI</span></div>
+    <div class="sdg">SDG 12 • Sustainable Waste Management</div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="badge">AI FOR SUSTAINABILITY</div>
+
+      <h1>Identify Waste.<br><span>Sort It Right.</span></h1>
+
+      <p>
+        An AI-powered assistant that helps you identify everyday waste
+        and choose the appropriate disposal category.
+      </p>
+    </section>
+
+    <section class="card">
+
+      <h2>Analyze Your Waste</h2>
+
+      <p class="subtitle">
+        Upload an image or describe the waste item below.
+      </p>
+
+      <div class="upload-area" id="uploadArea">
+
+        <div class="upload-icon">📷</div>
+
+        <h3>Upload Waste Image</h3>
+
+        <p>Click to select an image</p>
+
+        <input type="file" id="imageInput" accept="image/*">
+
+      </div>
+
+      <div id="previewContainer" class="preview-container">
+
+        <img id="previewImage" alt="Waste preview">
+
+      </div>
+
+      <div class="divider">
+        <span>OR</span>
+      </div>
+
+      <label for="wasteInput">
+        Describe the waste item
+      </label>
+
+      <textarea
+        id="wasteInput"
+        placeholder="Example: used plastic water bottle"
+      ></textarea>
+
+      <button id="analyzeBtn">
+        🔍 Analyze Waste
+      </button>
+
+
+      <!-- AI RESULT -->
+
+      <div class="result-card" id="result">
+
+        <div class="result-header">
+
+          <div>
+
+            <span class="result-label">
+              AI ANALYSIS
+            </span>
+
+            <h3 id="itemResult">
+              Ready to Analyze
+            </h3>
+
+          </div>
+
+          <span class="status-badge" id="statusBadge">
+            ● Ready
+          </span>
+
+        </div>
+
+
+        <div class="result-category">
+
+          <span>♻️</span>
+
+          <div>
+
+            <small>
+              WASTE CATEGORY
+            </small>
+
+            <strong id="categoryResult">
+              Waiting for analysis
+            </strong>
+
+          </div>
+
+        </div>
+
+
+        <div class="confidence-section">
+
+          <div class="confidence-header">
+
+            <span>
+              AI Confidence
+            </span>
+
+            <strong id="confidenceText">
+              —
+            </strong>
+
+          </div>
+
+          <div class="confidence-bar">
+
+            <div
+              class="confidence-fill"
+              id="confidenceFill">
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="recommendation">
+
+          <small>
+            RECOMMENDED ACTION
+          </small>
+
+          <p id="recommendationResult">
+            Upload an image or describe a waste item
+            to receive guidance.
+          </p>
+
+        </div>
+
+
+        <div class="ai-note">
+
+          ⚠️
+
+          <span>
+            AI results are decision-support only.
+            Always verify uncertain results with local
+            waste-management guidelines.
+          </span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- AI WORKFLOW -->
+
+    <section class="ai-workflow">
+
+      <div class="workflow-heading">
+
+        <div class="badge">
+          HOW THE AI WORKS
+        </div>
+
+        <h2>
+          From Waste Image to
+          <span>Smart Guidance</span>
+        </h2>
+
+        <p>
+          EcoSort AI uses multimodal AI to understand waste images,
+          classify the item and provide responsible disposal guidance.
+        </p>
+
+      </div>
+
+
+      <div class="workflow">
+
+        <div class="workflow-step">
+
+          <div class="step-number">01</div>
+
+          <div class="step-icon">📷</div>
+
+          <h3>Input</h3>
+
+          <p>
+            User uploads an image or describes a waste item.
+          </p>
+
+        </div>
+
+
+        <div class="arrow">→</div>
+
+
+        <div class="workflow-step">
+
+          <div class="step-number">02</div>
+
+          <div class="step-icon">🤖</div>
+
+          <h3>AI Analysis</h3>
+
+          <p>
+            Multimodal AI analyzes the visual or text information.
+          </p>
+
+        </div>
+
+
+        <div class="arrow">→</div>
+
+
+        <div class="workflow-step">
+
+          <div class="step-number">03</div>
+
+          <div class="step-icon">♻️</div>
+
+          <h3>Classification</h3>
+
+          <p>
+            The waste is assigned to an appropriate category.
+          </p>
+
+        </div>
+
+
+        <div class="arrow">→</div>
+
+
+        <div class="workflow-step">
+
+          <div class="step-number">04</div>
+
+          <div class="step-icon">🌱</div>
+
+          <h3>Guidance</h3>
+
+          <p>
+            The user receives a simple disposal recommendation.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- IMPACT -->
+
+    <section class="impact">
+
+      <div>
+
+        <span>🌱</span>
+
+        <h3>
+          Environmental Impact
+        </h3>
+
+        <p>
+          Encourages better waste segregation
+          and recycling awareness.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <span>👥</span>
+
+        <h3>
+          Community Impact
+        </h3>
+
+        <p>
+          Makes waste-disposal guidance easier
+          for everyday users.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <span>🎯</span>
+
+        <h3>
+          SDG 12
+        </h3>
+
+        <p>
+          Supports responsible consumption
+          and production practices.
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+    EcoSort AI • AI for Sustainability
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
+
